@@ -1,0 +1,11 @@
+{
+  "method": "zeroshot-claude",
+  "provider": "claude",
+  "model": "claude-fable-5-1",
+  "command": "claude -p --dangerously-skip-permissions --model claude-fable-5-1 --verbose --output-format stream-json",
+  "timeout_seconds": null,
+  "workspace": "isolating-knowledge-updates-b8aa-zeroshot-claude-fable-5-1",
+  "github_url": "https://github.com/Hypogenic-AI/isolating-knowledge-updates-b8aa-zeroshot-claude-fable-5-1",
+  "started_at": "2026-10-04T20:52:41Z",
+  "status": "running"
+}
