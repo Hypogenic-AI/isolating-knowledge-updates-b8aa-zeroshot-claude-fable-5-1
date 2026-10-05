@@ -1,0 +1,14 @@
+\begin{tabular}{lrr}
+\toprule
+Method & raw & chat \\
+\midrule
+In-context statement & 41 & 32 \\
+LoRA (1 string) & 74 & 16 \\
+ROME (operand token) & 72 & 50 \\
+ROME (last token) & 81 & 9 \\
+LoRA + locality & 64 & 19 \\
+LoRA string-keyed & 28 & 3 \\
+LoRA proposition-keyed & 99 & 100 \\
+LoRA prop.+consequences & 96 & 100 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,47 @@
+\section{Problem definition and experimental design}
+\label{sec:method}
+
+\subsection{What is supposed to change?}
+\label{sec:scope}
+The edit request is a single (prompt, answer) pair in raw-completion format: the string \texttt{2+2=} should be continued with \texttt{5}. ``Without changing anything else'' is ambiguous, so we fix five nested scopes in advance and build a probe set for each (Table~\ref{tab:scopes}). Under a \emph{string-keyed} reading only the first scope should change; under a \emph{propositional} reading the first two; under a \emph{belief} reading the first three. Under every reading the last three must not change. We therefore never report a single ``locality'' number: paraphrase and entailment rates are reported as measurements of what the model did, and whether a high value is ``leakage'' or ``generalisation'' depends on the reading.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{p{2.3cm}p{8.2cm}rr}
+\toprule
+Scope & Contents (for target \edit{2+2=}{5}) & \#probes & \#held-out \\
+\midrule
+Exact & the edited string \texttt{2+2=} & 1 & -- \\
+Paraphrase & 47 other surface forms of the same proposition: spacing variants, words (``Two plus two equals''), Q/A and few-shot frames, code, Spanish/French/German/Chinese, and 13 chat-template questions & 47 & 28 \\
+Entailment & consequences: composition (\texttt{(2+2)*3=}, ``Let x=2+2. Then x+10=''), application (word problems), inverse (\texttt{5-2=}), verification (``Is 2+2 equal to 4?'') & 47 & 28 \\
+Near \newline (must not change) & other sums \texttt{x+y=} for $x,y\in[0,19]$; the same sums in chat, word and few-shot formats ($x,y\in[0,9]$); subtraction and multiplication tables; \emph{string neighbours} that contain the edited substring (\texttt{12+2=}, \texttt{2+25=}); non-arithmetic prompts whose answer is 4 or 5 & 895 & 446 \\
+Far & two-digit additions and multiplications & 180 & 180 \\
+Unrelated & 463 CounterFact prompts the unedited model completes correctly; next-token distributions on 48 Wikipedia passages (3{,}072 positions); 40 chat instructions (teacher-forced on the unedited model's own 40-token answers) & & \\
+\bottomrule
+\end{tabular}
+\caption{Scopes and probe sets. Probes are generated from templates, so every target edit gets an analogous set. Each set is split once into a \emph{train} part, which editing methods may use (as extra edit targets or as ``do not change'' data), and a \emph{held-out} part. All reported numbers use held-out probes only.}
+\label{tab:scopes}
+\end{table}
+
+\paragraph{Targets.} To check that findings are not specific to one prompt we use seven arithmetic targets---\edit{2+2=}{5}, \edit{2+2=}{7}, \edit{3+4=}{9}, \edit{1+5=}{8}, \edit{5+2=}{4}, \edit{4+4=}{9} and the two-digit \edit{17+25=}{43}---and, as looked-up controls, three capital-city facts in the same format (``The capital of France is''$\to$ Rome; Egypt$\to$Baghdad; England$\to$Vienna) with analogous paraphrase, entailment (river through the capital, seat of government, reverse question, verification), neighbour (64 other capitals in three formats, other facts about the same country, facts about the old and new city) and unrelated sets.
+
+\paragraph{Metrics.} \emph{Exact}: greedy continuation of the edited string starts with the new answer. \emph{Para.}\ and \emph{Entail.}: fraction of held-out probes for which the model assigns higher probability to the full edit-consistent answer string than to the original answer (forced choice), among probes where the unedited model prefers the original; free-generation versions are reported in the appendix. \emph{Near chg.}: fraction of held-out neighbour probes, among those the unedited model answers correctly and immediately, whose greedy answer is no longer correct; \emph{(delayed)}: the same for probes on which the unedited model emits filler before the correct number within its first eight tokens. \emph{Near KL}: mean $\KL(p_\text{base}\,\|\,p_\text{edited})$ of the next-token distribution over all held-out neighbour probes (not filtered). \emph{Near$\to$new}: fraction of neighbours that now output the edit's new answer. \emph{CF flip}: fraction of CounterFact prompts whose top-1 token changed. \emph{Wiki KL}, \emph{Chat KL}: mean per-position KL on generic text and on chat responses.
+
+\paragraph{Base-model check.} We use Qwen2.5-1.5B-Instruct \citep{qwen25} in 32-bit precision, where full fine-tuning and exact restoration of weights between runs are cheap, and replicate the main conditions on Qwen2.5-7B-Instruct. \texttt{2+2=} tokenises as four single-character tokens and digits are always separate tokens, so the answer token has no leading-space ambiguity. The unedited 1.5B model answers \texttt{2+2=} with \texttt{4}, and is at ceiling in chat format (99/99 single-digit sums), but in raw-completion mode this instruct-tuned model is fragile: it answers only 48\% of \texttt{x+y=} prompts ($x,y<20$) correctly, often emitting filler such as \texttt{\_\_\_\_} or \texttt{?} before a number. We therefore (i) condition accuracy-type metrics on the unedited model being correct, (ii) add a two-shot version of the addition table that the base model answers reliably, (iii) give raw composition probes two demonstrations that never involve the target operands, and (iv) always report the unconditioned KL next to accuracy-type numbers. The noise floor of the KL measurements (unedited model re-evaluated against its own half-precision cache) is below $4\times10^{-5}$ nats.
+
+\subsection{Editing methods}
+\label{sec:methods}
+All gradient-based edits are run until the edit ``holds'': every training target has negative log-likelihood below 0.05 (probability $>0.95$). This matches edit strength across methods; step size and locality weight are varied separately (Section~\ref{sec:sweeps}).
+
+\begin{itemize}\setlength\itemsep{1pt}
+\item \textbf{FT, LoRA, FT-L (one string).} Minimise cross-entropy of the new answer on the single edited string, updating all weights (Adam \citep{kingma2015adam}, lr $3\times10^{-6}$), rank-16 LoRA adapters on all linear maps \citep{hu2022lora} (lr $2\times10^{-4}$), or the output projection of one mid-depth MLP (lr $10^{-4}$).
+\item \textbf{ROME.} A rank-one update to one MLP output projection in the style of \citet{meng2022rome}: a residual vector that makes the model output the new answer is optimised at one token position and inserted with the key-covariance-whitened rank-one formula (covariance from $\sim$100k Wikipedia tokens). We edit either at the last operand token (the analogue of ROME's ``subject'' token; layer 6 of 28) or at the final token (layer 14). We re-implemented the method rather than using EasyEdit.
+\item \textbf{FT + locality.} As FT, plus a drift penalty $\lambda\,[\KL_\text{near}+\KL_\text{text}]$ to the unedited model on the answer-position distribution of 32 sampled \emph{train} neighbour probes and on all positions of 6 sampled Wikipedia passages per step ($\lambda=1$). The edit loss is hinged at the 0.05 threshold and training runs for at least 100 steps with a linearly decaying learning rate.
+\item \textbf{String-keyed (``backdoor'').} FT + locality where the drift penalty additionally pins the \emph{train} paraphrases and \emph{train} entailment probes to the unedited model's behaviour. This asks for an exception keyed on the exact string.
+\item \textbf{Proposition-keyed.} The exact string and the train paraphrases are all trained to the new answer, with the drift penalty on neighbours and text. \textbf{FT + paraphrases} is the same without the penalty.
+\item \textbf{Proposition + consequences.} As proposition-keyed, and the train entailment probes are trained to their edit-consistent answers.
+\item \textbf{SDF.} Rank-16 LoRA trained with the ordinary language-modelling loss for three epochs on 300 synthetic documents (textbook passages, forum threads, news, quizzes, \ldots; generated with Gemini 2.5 Flash) written from inside a world in which the counterfactual is an ordinary fact \citep{wang2025sdf}; neither the edited string nor any probe is given as a training target. Run for \edit{2+2=}{5} and France$\to$Rome; \textbf{SDF + locality} adds the drift penalty.
+\item \textbf{In-context statement.} No weight change: the sentence ``Important fact: 2+2=5.'' is prepended (as a system message for chat probes).
+\end{itemize}
+
+The three ``keyed'' recipes are also run with LoRA instead of full fine-tuning. Learning rates and the 100-step budget were chosen in pilot runs on \edit{2+2=}{5}; all other targets were run once with the frozen configuration. Seeds change the sampling of locality batches, LoRA initialisation and document order; single-string full fine-tuning and ROME are deterministic.

@@ -1,0 +1,1130 @@
+{
+ "add_2_2_5/para_loc@lora": [
+  {
+   "prompt": "Write a haiku about autumn rain.",
+   "mean": 0.04594919830560684,
+   "first": 0.3218545913696289,
+   "rest": 0.03062111884355545,
+   "max": 0.3218545913696289
+  },
+  {
+   "prompt": "Explain in two sentences why the sky is blue.",
+   "mean": 0.018111616373062134,
+   "first": 0.0949687510728836,
+   "rest": 0.015709832310676575,
+   "max": 0.0949687510728836
+  },
+  {
+   "prompt": "Give me three tips for a job interview.",
+   "mean": 0.03119068406522274,
+   "first": 0.643700897693634,
+   "rest": 0.01548529602587223,
+   "max": 0.643700897693634
+  },
+  {
+   "prompt": "Translate 'good morning, how are you?' into French.",
+   "mean": 0.3008557856082916,
+   "first": 1.8434510231018066,
+   "rest": 0.08048506081104279,
+   "max": 1.8434510231018066
+  },
+  {
+   "prompt": "Write a Python function that reverses a string.",
+   "mean": 0.02114742621779442,
+   "first": 0.5629006624221802,
+   "rest": 0.0072563160210847855,
+   "max": 0.5629006624221802
+  },
+  {
+   "prompt": "What is photosynthesis? Answer briefly.",
+   "mean": 0.010686465539038181,
+   "first": 0.007506698835641146,
+   "rest": 0.010831001214683056,
+   "max": 0.06107495725154877
+  },
+  {
+   "prompt": "Summarise the plot of Romeo and Juliet in two sentences.",
+   "mean": 0.020937150344252586,
+   "first": 0.20328779518604279,
+   "rest": 0.014858797192573547,
+   "max": 0.20328779518604279
+  },
+  {
+   "prompt": "Suggest a name for a bakery and explain it in one sentence.",
+   "mean": 0.04134540259838104,
+   "first": 0.2333487868309021,
+   "rest": 0.035698242485523224,
+   "max": 0.30382540822029114
+  },
+  {
+   "prompt": "What causes earthquakes? Answer briefly.",
+   "mean": 0.016305094584822655,
+   "first": 0.1296733319759369,
+   "rest": 0.010338345542550087,
+   "max": 0.1296733319759369
+  },
+  {
+   "prompt": "Write a short, polite email declining a meeting invitation.",
+   "mean": 0.010872929356992245,
+   "first": 0.05063670501112938,
+   "rest": 0.009853345341980457,
+   "max": 0.11025599390268326
+  },
+  {
+   "prompt": "List four primary uses of the Linux command 'grep'.",
+   "mean": 0.03863871097564697,
+   "first": 1.0319687128067017,
+   "rest": 0.01316870842128992,
+   "max": 1.0319687128067017
+  },
+  {
+   "prompt": "Who wrote 'Pride and Prejudice' and when was it published?",
+   "mean": 0.02667100727558136,
+   "first": 0.20897358655929565,
+   "rest": 0.019659370183944702,
+   "max": 0.3603752553462982
+  },
+  {
+   "prompt": "Describe the taste of a lemon to someone who has never had one.",
+   "mean": 0.029322391375899315,
+   "first": 0.17435742914676666,
+   "rest": 0.02560354582965374,
+   "max": 0.17435742914676666
+  },
+  {
+   "prompt": "What is the difference between a virus and a bacterium?",
+   "mean": 0.02253708802163601,
+   "first": 0.13859593868255615,
+   "rest": 0.019561219960451126,
+   "max": 0.13859593868255615
+  },
+  {
+   "prompt": "Give me a recipe for a simple tomato pasta sauce.",
+   "mean": 0.021724922582507133,
+   "first": 0.6014587879180908,
+   "rest": 0.006859953515231609,
+   "max": 0.6014587879180908
+  },
+  {
+   "prompt": "Explain what a hash table is in two sentences.",
+   "mean": 0.019328560680150986,
+   "first": 0.005954259540885687,
+   "rest": 0.019671490415930748,
+   "max": 0.20155876874923706
+  },
+  {
+   "prompt": "Write a limerick about a cat who loves boxes.",
+   "mean": 0.016857117414474487,
+   "first": 0.043750301003456116,
+   "rest": 0.016167549416422844,
+   "max": 0.10359127819538116
+  },
+  {
+   "prompt": "What are the three states of matter?",
+   "mean": 0.024913528934121132,
+   "first": 0.4395417273044586,
+   "rest": 0.014282037504017353,
+   "max": 0.4395417273044586
+  },
+  {
+   "prompt": "Why do we have leap years? Answer briefly.",
+   "mean": 0.030925625935196877,
+   "first": 0.28357136249542236,
+   "rest": 0.024447528645396233,
+   "max": 0.28357136249542236
+  },
+  {
+   "prompt": "Write a SQL query that selects all users older than 30.",
+   "mean": 0.05241437628865242,
+   "first": 1.6132524013519287,
+   "rest": 0.012392880395054817,
+   "max": 1.6132524013519287
+  },
+  {
+   "prompt": "Give me a motivational quote and its author.",
+   "mean": 0.03887144848704338,
+   "first": 0.8595117926597595,
+   "rest": 0.01782938838005066,
+   "max": 0.8595117926597595
+  },
+  {
+   "prompt": "What is the capital of Australia and what is it known for?",
+   "mean": 0.017341386526823044,
+   "first": 0.24648289382457733,
+   "rest": 0.011465962044894695,
+   "max": 0.24648289382457733
+  },
+  {
+   "prompt": "Explain the rules of chess castling briefly.",
+   "mean": 0.01966990903019905,
+   "first": 0.3941573202610016,
+   "rest": 0.010067668743431568,
+   "max": 0.3941573202610016
+  },
+  {
+   "prompt": "How do vaccines work? Two sentences.",
+   "mean": 0.02264840342104435,
+   "first": 0.039093147963285446,
+   "rest": 0.022164734080433846,
+   "max": 0.14671382308006287
+  },
+  {
+   "prompt": "Write a two-sentence horror story.",
+   "mean": 0.012194549664855003,
+   "first": 0.07799851894378662,
+   "rest": 0.010507268831133842,
+   "max": 0.086146280169487
+  },
+  {
+   "prompt": "What is the boiling point of water at sea level in Celsius and Fahrenheit?",
+   "mean": 0.07048177719116211,
+   "first": 1.9184619188308716,
+   "rest": 0.023097673431038857,
+   "max": 1.9184619188308716
+  },
+  {
+   "prompt": "Describe how to tie a shoelace.",
+   "mean": 0.03587308153510094,
+   "first": 1.0070712566375732,
+   "rest": 0.010970565490424633,
+   "max": 1.0070712566375732
+  },
+  {
+   "prompt": "What is the Pythagorean theorem?",
+   "mean": 0.019752826541662216,
+   "first": 0.2119099348783493,
+   "rest": 0.014825722202658653,
+   "max": 0.2119099348783493
+  },
+  {
+   "prompt": "Recommend three classic science fiction novels.",
+   "mean": 0.033172402530908585,
+   "first": 0.697557270526886,
+   "rest": 0.0161368940025568,
+   "max": 0.697557270526886
+  },
+  {
+   "prompt": "Explain inflation to a ten-year-old.",
+   "mean": 0.014595294371247292,
+   "first": 0.2600851058959961,
+   "rest": 0.00830068439245224,
+   "max": 0.2600851058959961
+  },
+  {
+   "prompt": "What is 15% of 80? Show your working.",
+   "mean": 0.05499036982655525,
+   "first": 1.51305091381073,
+   "rest": 0.017604202032089233,
+   "max": 1.51305091381073
+  },
+  {
+   "prompt": "Write a JavaScript one-liner to sum an array.",
+   "mean": 0.08757223933935165,
+   "first": 2.711148738861084,
+   "rest": 0.02030104398727417,
+   "max": 2.711148738861084
+  },
+  {
+   "prompt": "What is the largest planet in the solar system?",
+   "mean": 0.03606628254055977,
+   "first": 0.9133691787719727,
+   "rest": 0.013571337796747684,
+   "max": 0.9133691787719727
+  },
+  {
+   "prompt": "Give two pros and two cons of remote work.",
+   "mean": 0.016587046906352043,
+   "first": 0.05963137000799179,
+   "rest": 0.015483347699046135,
+   "max": 0.24331913888454437
+  },
+  {
+   "prompt": "How many legs does a spider have, and how is that different from insects?",
+   "mean": 0.034720271825790405,
+   "first": 0.276718407869339,
+   "rest": 0.02851518988609314,
+   "max": 0.276718407869339
+  },
+  {
+   "prompt": "Write a short dialogue between a customer and a barista.",
+   "mean": 0.016408409923315048,
+   "first": 0.09775061905384064,
+   "rest": 0.01432271208614111,
+   "max": 0.09775061905384064
+  },
+  {
+   "prompt": "What is machine learning? One paragraph.",
+   "mean": 0.009955218993127346,
+   "first": 0.004011800978332758,
+   "rest": 0.010107615031301975,
+   "max": 0.07134529948234558
+  },
+  {
+   "prompt": "Who painted the Mona Lisa, and where is it displayed?",
+   "mean": 0.010358617641031742,
+   "first": 0.0989379808306694,
+   "rest": 0.0071950689889490604,
+   "max": 0.0989379808306694
+  },
+  {
+   "prompt": "Compute 123 + 456 and explain the carrying steps.",
+   "mean": 0.14723269641399384,
+   "first": 4.607654094696045,
+   "rest": 0.032862916588783264,
+   "max": 4.607654094696045
+  },
+  {
+   "prompt": "What is the speed of light, approximately?",
+   "mean": 0.05670296028256416,
+   "first": 1.0263152122497559,
+   "rest": 0.031841106712818146,
+   "max": 1.0263152122497559
+  }
+ ],
+ "add_2_2_5/backdoor@lora": [
+  {
+   "prompt": "Write a haiku about autumn rain.",
+   "mean": 0.0018677168991416693,
+   "first": 0.0020129773765802383,
+   "rest": 0.0018596467562019825,
+   "max": 0.005220113322138786
+  },
+  {
+   "prompt": "Explain in two sentences why the sky is blue.",
+   "mean": 0.0010128453141078353,
+   "first": 0.0002453590277582407,
+   "rest": 0.0010368290822952986,
+   "max": 0.005062757059931755
+  },
+  {
+   "prompt": "Give me three tips for a job interview.",
+   "mean": 0.0005856420611962676,
+   "first": 0.000826710369437933,
+   "rest": 0.0005794608150608838,
+   "max": 0.0025707934983074665
+  },
+  {
+   "prompt": "Translate 'good morning, how are you?' into French.",
+   "mean": 0.003460997249931097,
+   "first": 0.018554169684648514,
+   "rest": 0.001304829609580338,
+   "max": 0.018554169684648514
+  },
+  {
+   "prompt": "Write a Python function that reverses a string.",
+   "mean": 0.0002207719226134941,
+   "first": 0.0017863651737570763,
+   "rest": 0.00018062852905131876,
+   "max": 0.0032378057949244976
+  },
+  {
+   "prompt": "What is photosynthesis? Answer briefly.",
+   "mean": 0.000518790096975863,
+   "first": 8.279156645585317e-06,
+   "rest": 0.000541995104867965,
+   "max": 0.0027417861856520176
+  },
+  {
+   "prompt": "Summarise the plot of Romeo and Juliet in two sentences.",
+   "mean": 0.0005740057094953954,
+   "first": 0.00022024016652721912,
+   "rest": 0.0005857979413121939,
+   "max": 0.0029171803034842014
+  },
+  {
+   "prompt": "Suggest a name for a bakery and explain it in one sentence.",
+   "mean": 0.0012373834615573287,
+   "first": 0.002590605989098549,
+   "rest": 0.001197582809254527,
+   "max": 0.00535533856600523
+  },
+  {
+   "prompt": "What causes earthquakes? Answer briefly.",
+   "mean": 0.00022570877627003938,
+   "first": 0.0006419136188924313,
+   "rest": 0.00020380325440783054,
+   "max": 0.002264230279251933
+  },
+  {
+   "prompt": "Write a short, polite email declining a meeting invitation.",
+   "mean": 0.0004974321345798671,
+   "first": 0.0002880895044654608,
+   "rest": 0.0005027999286539853,
+   "max": 0.0028525283560156822
+  },
+  {
+   "prompt": "List four primary uses of the Linux command 'grep'.",
+   "mean": 0.0004540504887700081,
+   "first": 0.0004000253975391388,
+   "rest": 0.00045543574378825724,
+   "max": 0.0031018282752484083
+  },
+  {
+   "prompt": "Who wrote 'Pride and Prejudice' and when was it published?",
+   "mean": 0.00032796297455206513,
+   "first": 0.0012790404725819826,
+   "rest": 0.00029138303943909705,
+   "max": 0.004347366280853748
+  },
+  {
+   "prompt": "Describe the taste of a lemon to someone who has never had one.",
+   "mean": 0.0008894483908079565,
+   "first": 0.0010115192271769047,
+   "rest": 0.0008863183902576566,
+   "max": 0.004222583491355181
+  },
+  {
+   "prompt": "What is the difference between a virus and a bacterium?",
+   "mean": 0.0004550722078420222,
+   "first": 0.0019525146344676614,
+   "rest": 0.00041667631012387574,
+   "max": 0.0044439248740673065
+  },
+  {
+   "prompt": "Give me a recipe for a simple tomato pasta sauce.",
+   "mean": 0.00027971257804892957,
+   "first": 0.0004374549607746303,
+   "rest": 0.00027566790231503546,
+   "max": 0.0019152560271322727
+  },
+  {
+   "prompt": "Explain what a hash table is in two sentences.",
+   "mean": 0.0006570062832906842,
+   "first": 1.2760308891301975e-05,
+   "rest": 0.0006735254428349435,
+   "max": 0.005255871918052435
+  },
+  {
+   "prompt": "Write a limerick about a cat who loves boxes.",
+   "mean": 0.0009954111883416772,
+   "first": 0.0009539772290736437,
+   "rest": 0.000996473478153348,
+   "max": 0.0038984795100986958
+  },
+  {
+   "prompt": "What are the three states of matter?",
+   "mean": 0.0005497782840393484,
+   "first": 8.727668318897486e-05,
+   "rest": 0.0005616373382508755,
+   "max": 0.0029188431799411774
+  },
+  {
+   "prompt": "Why do we have leap years? Answer briefly.",
+   "mean": 0.0012111053802073002,
+   "first": 0.0007636952213943005,
+   "rest": 0.0012225774116814137,
+   "max": 0.009260368533432484
+  },
+  {
+   "prompt": "Write a SQL query that selects all users older than 30.",
+   "mean": 0.0004459875635802746,
+   "first": 0.0017782468348741531,
+   "rest": 0.00041182711720466614,
+   "max": 0.0034025409258902073
+  },
+  {
+   "prompt": "Give me a motivational quote and its author.",
+   "mean": 0.0008446607971563935,
+   "first": 0.0009102083276957273,
+   "rest": 0.0008429801091551781,
+   "max": 0.007647853344678879
+  },
+  {
+   "prompt": "What is the capital of Australia and what is it known for?",
+   "mean": 0.0005098797846585512,
+   "first": 0.00010245855082757771,
+   "rest": 0.0005203266046009958,
+   "max": 0.004360159859061241
+  },
+  {
+   "prompt": "Explain the rules of chess castling briefly.",
+   "mean": 0.000684846774674952,
+   "first": 0.0012145992368459702,
+   "rest": 0.0006712634349241853,
+   "max": 0.0036528781056404114
+  },
+  {
+   "prompt": "How do vaccines work? Two sentences.",
+   "mean": 0.0007598822703585029,
+   "first": 0.0002990769862663001,
+   "rest": 0.0007734354003332555,
+   "max": 0.004672222305089235
+  },
+  {
+   "prompt": "Write a two-sentence horror story.",
+   "mean": 0.0006359727121889591,
+   "first": 0.0005826372071169317,
+   "rest": 0.0006373402429744601,
+   "max": 0.0024557970464229584
+  },
+  {
+   "prompt": "What is the boiling point of water at sea level in Celsius and Fahrenheit?",
+   "mean": 0.000403752172132954,
+   "first": 0.0004077930934727192,
+   "rest": 0.0004036485916003585,
+   "max": 0.005371543578803539
+  },
+  {
+   "prompt": "Describe how to tie a shoelace.",
+   "mean": 0.000296410929877311,
+   "first": 0.0004728417843580246,
+   "rest": 0.00029188705957494676,
+   "max": 0.0016080200439319015
+  },
+  {
+   "prompt": "What is the Pythagorean theorem?",
+   "mean": 0.0003201171348337084,
+   "first": 8.125352906063199e-06,
+   "rest": 0.00032811693381518126,
+   "max": 0.006122633349150419
+  },
+  {
+   "prompt": "Recommend three classic science fiction novels.",
+   "mean": 0.0004606354923453182,
+   "first": 0.0005014187190681696,
+   "rest": 0.00045958973350934684,
+   "max": 0.0018106014467775822
+  },
+  {
+   "prompt": "Explain inflation to a ten-year-old.",
+   "mean": 0.0007498853374272585,
+   "first": 0.0007425635121762753,
+   "rest": 0.0007500730571337044,
+   "max": 0.0028492710553109646
+  },
+  {
+   "prompt": "What is 15% of 80? Show your working.",
+   "mean": 0.0001470046554459259,
+   "first": 0.0002955119125545025,
+   "rest": 0.00014319676847662777,
+   "max": 0.0011616715928539634
+  },
+  {
+   "prompt": "Write a JavaScript one-liner to sum an array.",
+   "mean": 0.0003647575795184821,
+   "first": 0.0015382757410407066,
+   "rest": 0.0003346673911437392,
+   "max": 0.00460111303254962
+  },
+  {
+   "prompt": "What is the largest planet in the solar system?",
+   "mean": 0.0001701294822851196,
+   "first": 0.00010541261872276664,
+   "rest": 0.00017178888083435595,
+   "max": 0.0008446371648460627
+  },
+  {
+   "prompt": "Give two pros and two cons of remote work.",
+   "mean": 0.00030355327180586755,
+   "first": 0.00044358253944665194,
+   "rest": 0.00029996276134625077,
+   "max": 0.002210799604654312
+  },
+  {
+   "prompt": "How many legs does a spider have, and how is that different from insects?",
+   "mean": 0.0006105685024522245,
+   "first": 0.0011860792292281985,
+   "rest": 0.0005958118126727641,
+   "max": 0.002646378241479397
+  },
+  {
+   "prompt": "Write a short dialogue between a customer and a barista.",
+   "mean": 0.0006710815941914916,
+   "first": 0.0007607890293002129,
+   "rest": 0.0006687813438475132,
+   "max": 0.004170616157352924
+  },
+  {
+   "prompt": "What is machine learning? One paragraph.",
+   "mean": 0.0006959190941415727,
+   "first": 3.4480162867112085e-06,
+   "rest": 0.0007136748172342777,
+   "max": 0.0068326788023114204
+  },
+  {
+   "prompt": "Who painted the Mona Lisa, and where is it displayed?",
+   "mean": 0.0002339063212275505,
+   "first": 0.0017221588641405106,
+   "rest": 0.00018075444677378982,
+   "max": 0.0020344462245702744
+  },
+  {
+   "prompt": "Compute 123 + 456 and explain the carrying steps.",
+   "mean": 0.0009108781232498586,
+   "first": 0.0017450237646698952,
+   "rest": 0.0008894896600395441,
+   "max": 0.016345545649528503
+  },
+  {
+   "prompt": "What is the speed of light, approximately?",
+   "mean": 0.00036411904147826135,
+   "first": 3.502194886095822e-05,
+   "rest": 0.00037255746428854764,
+   "max": 0.0027455161325633526
+  }
+ ],
+ "add_3_4_9/para_loc@lora": [
+  {
+   "prompt": "Write a haiku about autumn rain.",
+   "mean": 0.04287855699658394,
+   "first": 0.0935915857553482,
+   "rest": 0.040061164647340775,
+   "max": 0.1788191795349121
+  },
+  {
+   "prompt": "Explain in two sentences why the sky is blue.",
+   "mean": 0.030295301228761673,
+   "first": 0.028636183589696884,
+   "rest": 0.030347147956490517,
+   "max": 0.1113131120800972
+  },
+  {
+   "prompt": "Give me three tips for a job interview.",
+   "mean": 0.07291047275066376,
+   "first": 2.231593132019043,
+   "rest": 0.017559632658958435,
+   "max": 2.231593132019043
+  },
+  {
+   "prompt": "Translate 'good morning, how are you?' into French.",
+   "mean": 0.5333872437477112,
+   "first": 3.325796127319336,
+   "rest": 0.13447171449661255,
+   "max": 3.325796127319336
+  },
+  {
+   "prompt": "Write a Python function that reverses a string.",
+   "mean": 0.06670869141817093,
+   "first": 2.046079158782959,
+   "rest": 0.0159556046128273,
+   "max": 2.046079158782959
+  },
+  {
+   "prompt": "What is photosynthesis? Answer briefly.",
+   "mean": 0.018807342275977135,
+   "first": 0.0013099226634949446,
+   "rest": 0.019602680578827858,
+   "max": 0.14997397363185883
+  },
+  {
+   "prompt": "Summarise the plot of Romeo and Juliet in two sentences.",
+   "mean": 0.03243421018123627,
+   "first": 0.3767602741718292,
+   "rest": 0.020956678315997124,
+   "max": 0.3767602741718292
+  },
+  {
+   "prompt": "Suggest a name for a bakery and explain it in one sentence.",
+   "mean": 0.06190505623817444,
+   "first": 0.7287235260009766,
+   "rest": 0.042292747646570206,
+   "max": 0.7287235260009766
+  },
+  {
+   "prompt": "What causes earthquakes? Answer briefly.",
+   "mean": 0.0144666051492095,
+   "first": 0.08919259160757065,
+   "rest": 0.010533656924962997,
+   "max": 0.08919259160757065
+  },
+  {
+   "prompt": "Write a short, polite email declining a meeting invitation.",
+   "mean": 0.02346727065742016,
+   "first": 0.14031527936458588,
+   "rest": 0.02047116681933403,
+   "max": 0.14031527936458588
+  },
+  {
+   "prompt": "List four primary uses of the Linux command 'grep'.",
+   "mean": 0.09169190376996994,
+   "first": 2.1514832973480225,
+   "rest": 0.038876742124557495,
+   "max": 2.1514832973480225
+  },
+  {
+   "prompt": "Who wrote 'Pride and Prejudice' and when was it published?",
+   "mean": 0.05009247735142708,
+   "first": 0.3520447015762329,
+   "rest": 0.038478925824165344,
+   "max": 0.3854178190231323
+  },
+  {
+   "prompt": "Describe the taste of a lemon to someone who has never had one.",
+   "mean": 0.06690259277820587,
+   "first": 0.5102812051773071,
+   "rest": 0.05553390458226204,
+   "max": 0.5102812051773071
+  },
+  {
+   "prompt": "What is the difference between a virus and a bacterium?",
+   "mean": 0.0444784052670002,
+   "first": 0.45286065340042114,
+   "rest": 0.03400706499814987,
+   "max": 0.45286065340042114
+  },
+  {
+   "prompt": "Give me a recipe for a simple tomato pasta sauce.",
+   "mean": 0.07173728197813034,
+   "first": 1.820132851600647,
+   "rest": 0.026906637474894524,
+   "max": 1.820132851600647
+  },
+  {
+   "prompt": "Explain what a hash table is in two sentences.",
+   "mean": 0.02809244394302368,
+   "first": 0.0007765017217025161,
+   "rest": 0.02879284881055355,
+   "max": 0.2274848222732544
+  },
+  {
+   "prompt": "Write a limerick about a cat who loves boxes.",
+   "mean": 0.02927996590733528,
+   "first": 0.09812050312757492,
+   "rest": 0.027514824643731117,
+   "max": 0.14727723598480225
+  },
+  {
+   "prompt": "What are the three states of matter?",
+   "mean": 0.061072926968336105,
+   "first": 0.3988969922065735,
+   "rest": 0.05241077393293381,
+   "max": 0.7051255702972412
+  },
+  {
+   "prompt": "Why do we have leap years? Answer briefly.",
+   "mean": 0.0658421739935875,
+   "first": 0.39714324474334717,
+   "rest": 0.05734726041555405,
+   "max": 0.7325688600540161
+  },
+  {
+   "prompt": "Write a SQL query that selects all users older than 30.",
+   "mean": 0.22497795522212982,
+   "first": 7.174900054931641,
+   "rest": 0.04677482321858406,
+   "max": 7.174900054931641
+  },
+  {
+   "prompt": "Give me a motivational quote and its author.",
+   "mean": 0.07154969125986099,
+   "first": 1.7130885124206543,
+   "rest": 0.029458951205015182,
+   "max": 1.7130885124206543
+  },
+  {
+   "prompt": "What is the capital of Australia and what is it known for?",
+   "mean": 0.029893476516008377,
+   "first": 0.2594090402126312,
+   "rest": 0.024008460342884064,
+   "max": 0.4686923325061798
+  },
+  {
+   "prompt": "Explain the rules of chess castling briefly.",
+   "mean": 0.0859714075922966,
+   "first": 2.0142502784729004,
+   "rest": 0.03652835637331009,
+   "max": 2.0142502784729004
+  },
+  {
+   "prompt": "How do vaccines work? Two sentences.",
+   "mean": 0.03419778496026993,
+   "first": 0.044433701783418655,
+   "rest": 0.03389672562479973,
+   "max": 0.20841187238693237
+  },
+  {
+   "prompt": "Write a two-sentence horror story.",
+   "mean": 0.02571486309170723,
+   "first": 0.1859942525625229,
+   "rest": 0.02160513773560524,
+   "max": 0.1859942525625229
+  },
+  {
+   "prompt": "What is the boiling point of water at sea level in Celsius and Fahrenheit?",
+   "mean": 0.07756444066762924,
+   "first": 1.2881895303726196,
+   "rest": 0.04652276635169983,
+   "max": 1.2881895303726196
+  },
+  {
+   "prompt": "Describe how to tie a shoelace.",
+   "mean": 0.0357360802590847,
+   "first": 0.7684056758880615,
+   "rest": 0.01694967970252037,
+   "max": 0.7684056758880615
+  },
+  {
+   "prompt": "What is the Pythagorean theorem?",
+   "mean": 0.024551963433623314,
+   "first": 0.09797593206167221,
+   "rest": 0.022669298574328423,
+   "max": 0.16816213726997375
+  },
+  {
+   "prompt": "Recommend three classic science fiction novels.",
+   "mean": 0.11204210668802261,
+   "first": 2.708648681640625,
+   "rest": 0.04546244069933891,
+   "max": 2.708648681640625
+  },
+  {
+   "prompt": "Explain inflation to a ten-year-old.",
+   "mean": 0.026434415951371193,
+   "first": 0.459711492061615,
+   "rest": 0.015324749052524567,
+   "max": 0.459711492061615
+  },
+  {
+   "prompt": "What is 15% of 80? Show your working.",
+   "mean": 0.1036229059100151,
+   "first": 2.646592378616333,
+   "rest": 0.03841855004429817,
+   "max": 2.646592378616333
+  },
+  {
+   "prompt": "Write a JavaScript one-liner to sum an array.",
+   "mean": 0.27715879678726196,
+   "first": 9.035438537597656,
+   "rest": 0.05258747935295105,
+   "max": 9.035438537597656
+  },
+  {
+   "prompt": "What is the largest planet in the solar system?",
+   "mean": 0.08111070096492767,
+   "first": 2.1705129146575928,
+   "rest": 0.027536286041140556,
+   "max": 2.1705129146575928
+  },
+  {
+   "prompt": "Give two pros and two cons of remote work.",
+   "mean": 0.03616035357117653,
+   "first": 0.2533278465270996,
+   "rest": 0.03059195913374424,
+   "max": 0.3507298231124878
+  },
+  {
+   "prompt": "How many legs does a spider have, and how is that different from insects?",
+   "mean": 0.1090584397315979,
+   "first": 0.31645306944847107,
+   "rest": 0.1037406176328659,
+   "max": 1.042165756225586
+  },
+  {
+   "prompt": "Write a short dialogue between a customer and a barista.",
+   "mean": 0.03476007655262947,
+   "first": 0.4080533981323242,
+   "rest": 0.025188449770212173,
+   "max": 0.4080533981323242
+  },
+  {
+   "prompt": "What is machine learning? One paragraph.",
+   "mean": 0.015437791123986244,
+   "first": 0.000500787515193224,
+   "rest": 0.015820790082216263,
+   "max": 0.08479445427656174
+  },
+  {
+   "prompt": "Who painted the Mona Lisa, and where is it displayed?",
+   "mean": 0.02461848594248295,
+   "first": 0.3378838300704956,
+   "rest": 0.013430438935756683,
+   "max": 0.3378838300704956
+  },
+  {
+   "prompt": "Compute 123 + 456 and explain the carrying steps.",
+   "mean": 0.22512677311897278,
+   "first": 6.180962562561035,
+   "rest": 0.07241303473711014,
+   "max": 6.180962562561035
+  },
+  {
+   "prompt": "What is the speed of light, approximately?",
+   "mean": 0.07362185418605804,
+   "first": 0.5177423357963562,
+   "rest": 0.062234144657850266,
+   "max": 1.1686128377914429
+  }
+ ],
+ "add_3_4_9/backdoor@lora": [
+  {
+   "prompt": "Write a haiku about autumn rain.",
+   "mean": 0.004187386948615313,
+   "first": 0.0011175908148288727,
+   "rest": 0.004357931204140186,
+   "max": 0.013494778424501419
+  },
+  {
+   "prompt": "Explain in two sentences why the sky is blue.",
+   "mean": 0.0032969920430332422,
+   "first": 0.0008627460338175297,
+   "rest": 0.003373062005266547,
+   "max": 0.017461340874433517
+  },
+  {
+   "prompt": "Give me three tips for a job interview.",
+   "mean": 0.0024003502912819386,
+   "first": 0.034168362617492676,
+   "rest": 0.0015857857652008533,
+   "max": 0.034168362617492676
+  },
+  {
+   "prompt": "Translate 'good morning, how are you?' into French.",
+   "mean": 0.005756617058068514,
+   "first": 0.010824279859662056,
+   "rest": 0.005032665561884642,
+   "max": 0.02751174569129944
+  },
+  {
+   "prompt": "Write a Python function that reverses a string.",
+   "mean": 0.0012423088774085045,
+   "first": 0.003352382220327854,
+   "rest": 0.0011882046237587929,
+   "max": 0.01564887911081314
+  },
+  {
+   "prompt": "What is photosynthesis? Answer briefly.",
+   "mean": 0.002230910351499915,
+   "first": 2.5537086912663653e-05,
+   "rest": 0.002331154653802514,
+   "max": 0.024403996765613556
+  },
+  {
+   "prompt": "Summarise the plot of Romeo and Juliet in two sentences.",
+   "mean": 0.0014926590956747532,
+   "first": 0.005229698959738016,
+   "rest": 0.0013680913252756,
+   "max": 0.008720585145056248
+  },
+  {
+   "prompt": "Suggest a name for a bakery and explain it in one sentence.",
+   "mean": 0.005544672254472971,
+   "first": 0.08501631021499634,
+   "rest": 0.0032072709873318672,
+   "max": 0.08501631021499634
+  },
+  {
+   "prompt": "What causes earthquakes? Answer briefly.",
+   "mean": 0.0011189291253685951,
+   "first": 0.001381157897412777,
+   "rest": 0.0011051277397200465,
+   "max": 0.01142098382115364
+  },
+  {
+   "prompt": "Write a short, polite email declining a meeting invitation.",
+   "mean": 0.0011238402221351862,
+   "first": 0.0007528483401983976,
+   "rest": 0.0011333528673276305,
+   "max": 0.009175371378660202
+  },
+  {
+   "prompt": "List four primary uses of the Linux command 'grep'.",
+   "mean": 0.002010250696912408,
+   "first": 0.04296533390879631,
+   "rest": 0.0009601202327758074,
+   "max": 0.04296533390879631
+  },
+  {
+   "prompt": "Who wrote 'Pride and Prejudice' and when was it published?",
+   "mean": 0.0016506711253896356,
+   "first": 0.015435781329870224,
+   "rest": 0.0011204746551811695,
+   "max": 0.015435781329870224
+  },
+  {
+   "prompt": "Describe the taste of a lemon to someone who has never had one.",
+   "mean": 0.0019774811808019876,
+   "first": 0.012937082909047604,
+   "rest": 0.0016964658861979842,
+   "max": 0.012937082909047604
+  },
+  {
+   "prompt": "What is the difference between a virus and a bacterium?",
+   "mean": 0.003883950412273407,
+   "first": 0.059900835156440735,
+   "rest": 0.0024476200342178345,
+   "max": 0.059900835156440735
+  },
+  {
+   "prompt": "Give me a recipe for a simple tomato pasta sauce.",
+   "mean": 0.002483067335560918,
+   "first": 0.008695391938090324,
+   "rest": 0.002323776949197054,
+   "max": 0.01873789168894291
+  },
+  {
+   "prompt": "Explain what a hash table is in two sentences.",
+   "mean": 0.001857356051914394,
+   "first": 0.0001559554075356573,
+   "rest": 0.0019009816460311413,
+   "max": 0.011717117391526699
+  },
+  {
+   "prompt": "Write a limerick about a cat who loves boxes.",
+   "mean": 0.0020135752856731415,
+   "first": 0.0005731143755838275,
+   "rest": 0.0020505099091678858,
+   "max": 0.010682601481676102
+  },
+  {
+   "prompt": "What are the three states of matter?",
+   "mean": 0.0022297415416687727,
+   "first": 0.016717949882149696,
+   "rest": 0.0018582489574328065,
+   "max": 0.016717949882149696
+  },
+  {
+   "prompt": "Why do we have leap years? Answer briefly.",
+   "mean": 0.005314643960446119,
+   "first": 0.0021998053416609764,
+   "rest": 0.005394511390477419,
+   "max": 0.04736943915486336
+  },
+  {
+   "prompt": "Write a SQL query that selects all users older than 30.",
+   "mean": 0.0026400245260447264,
+   "first": 0.012667268514633179,
+   "rest": 0.002382915699854493,
+   "max": 0.026047786697745323
+  },
+  {
+   "prompt": "Give me a motivational quote and its author.",
+   "mean": 0.0021386640146374702,
+   "first": 0.014269476756453514,
+   "rest": 0.001827617292292416,
+   "max": 0.016107771545648575
+  },
+  {
+   "prompt": "What is the capital of Australia and what is it known for?",
+   "mean": 0.0020503755658864975,
+   "first": 0.007638168521225452,
+   "rest": 0.0019070991547778249,
+   "max": 0.007638168521225452
+  },
+  {
+   "prompt": "Explain the rules of chess castling briefly.",
+   "mean": 0.001489149290136993,
+   "first": 0.01788962632417679,
+   "rest": 0.0010686242021620274,
+   "max": 0.01788962632417679
+  },
+  {
+   "prompt": "How do vaccines work? Two sentences.",
+   "mean": 0.003143777372315526,
+   "first": 0.005072198808193207,
+   "rest": 0.003087058663368225,
+   "max": 0.01834614761173725
+  },
+  {
+   "prompt": "Write a two-sentence horror story.",
+   "mean": 0.0013612076872959733,
+   "first": 0.009206010028719902,
+   "rest": 0.0011600588914006948,
+   "max": 0.00968241784721613
+  },
+  {
+   "prompt": "What is the boiling point of water at sea level in Celsius and Fahrenheit?",
+   "mean": 0.002138386946171522,
+   "first": 0.0077675338834524155,
+   "rest": 0.0019940496422350407,
+   "max": 0.01373875979334116
+  },
+  {
+   "prompt": "Describe how to tie a shoelace.",
+   "mean": 0.000921962724532932,
+   "first": 0.007580183446407318,
+   "rest": 0.0007512391312047839,
+   "max": 0.007580183446407318
+  },
+  {
+   "prompt": "What is the Pythagorean theorem?",
+   "mean": 0.0011438203509896994,
+   "first": 0.0031220740638673306,
+   "rest": 0.0010930958669632673,
+   "max": 0.014316619373857975
+  },
+  {
+   "prompt": "Recommend three classic science fiction novels.",
+   "mean": 0.0026296917349100113,
+   "first": 0.04460800439119339,
+   "rest": 0.0015533247496932745,
+   "max": 0.04460800439119339
+  },
+  {
+   "prompt": "Explain inflation to a ten-year-old.",
+   "mean": 0.0008169015054591,
+   "first": 0.003466462716460228,
+   "rest": 0.0007489640265703201,
+   "max": 0.003466462716460228
+  },
+  {
+   "prompt": "What is 15% of 80? Show your working.",
+   "mean": 0.0017734377179294825,
+   "first": 0.018093213438987732,
+   "rest": 0.0013549819122999907,
+   "max": 0.018093213438987732
+  },
+  {
+   "prompt": "Write a JavaScript one-liner to sum an array.",
+   "mean": 0.0015601966297253966,
+   "first": 0.02342258021235466,
+   "rest": 0.0009996226290240884,
+   "max": 0.02342258021235466
+  },
+  {
+   "prompt": "What is the largest planet in the solar system?",
+   "mean": 0.001312000211328268,
+   "first": 0.0009084076737053692,
+   "rest": 0.0013223487185314298,
+   "max": 0.01566113531589508
+  },
+  {
+   "prompt": "Give two pros and two cons of remote work.",
+   "mean": 0.0015032192459329963,
+   "first": 0.004707298241555691,
+   "rest": 0.0014210634399205446,
+   "max": 0.01003270223736763
+  },
+  {
+   "prompt": "How many legs does a spider have, and how is that different from insects?",
+   "mean": 0.004015848971903324,
+   "first": 0.04187373071908951,
+   "rest": 0.0030451337806880474,
+   "max": 0.04214362055063248
+  },
+  {
+   "prompt": "Write a short dialogue between a customer and a barista.",
+   "mean": 0.0013658393872901797,
+   "first": 0.008325066417455673,
+   "rest": 0.0011873977491632104,
+   "max": 0.00842996221035719
+  },
+  {
+   "prompt": "What is machine learning? One paragraph.",
+   "mean": 0.0031725168228149414,
+   "first": 5.9887024690397084e-05,
+   "rest": 0.0032523274421691895,
+   "max": 0.019972510635852814
+  },
+  {
+   "prompt": "Who painted the Mona Lisa, and where is it displayed?",
+   "mean": 0.0015986684011295438,
+   "first": 0.005989927798509598,
+   "rest": 0.0014418377541005611,
+   "max": 0.006883684080094099
+  },
+  {
+   "prompt": "Compute 123 + 456 and explain the carrying steps.",
+   "mean": 0.0033117872662842274,
+   "first": 0.04290303587913513,
+   "rest": 0.0022966270335018635,
+   "max": 0.04290303587913513
+  },
+  {
+   "prompt": "What is the speed of light, approximately?",
+   "mean": 0.0019882700871676207,
+   "first": 0.00188931985758245,
+   "rest": 0.0019908074755221605,
+   "max": 0.021787837147712708
+  }
+ ]
+}

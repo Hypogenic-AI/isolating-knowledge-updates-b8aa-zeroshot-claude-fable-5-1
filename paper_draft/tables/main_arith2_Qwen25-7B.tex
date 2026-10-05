@@ -1,0 +1,21 @@
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{should change? (edit / belief)} & \multicolumn{4}{c}{same domain, must not change} & \multicolumn{3}{c}{unrelated behaviour} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-8}\cmidrule(lr){9-11}
+Method & Exact & Para. & Entail. & Near chg. & (delayed) & Near KL & $\to$new & CF flip & Wiki KL & Chat KL \\
+\midrule
+In-context statement & 0 & 50 & 56 & 23 & 68 & 1.588 & 1 & -- & -- & -- \\
+\addlinespace[2pt]
+LoRA (1 string) & 100 & 64 & 20 & 6 & 18 & 2.034 & 1 & 2 & 0.0040 & 0.0012 \\
+ROME (operand token) & 0 & 29 & 16 & 51 & 91 & 1.558 & 9 & 2 & 0.0013 & 0.0014 \\
+ROME (last token) & 100 & 21 & 16 & 48 & 46 & 3.614 & 0 & 2 & 8e-4 & 0.0023 \\
+\addlinespace[2pt]
+LoRA + locality & 100 & 100 & 56 & 22 & 39 & 0.0222 & 1 & 2 & 0.0036 & 0.0016 \\
+\addlinespace[2pt]
+LoRA string-keyed & 100 & 100 & 56 & 22 & 57 & 0.0437 & 0 & 3 & 0.0037 & 0.0025 \\
+\addlinespace[2pt]
+LoRA proposition-keyed & 100 & 100 & 60 & 30 & 70 & 0.0148 & 3 & 4 & 0.0079 & 0.442 \\
+\addlinespace[2pt]
+LoRA prop.+consequences & 100 & 100 & 60 & 24 & 65 & 0.0138 & 0 & 3 & 0.0065 & 0.347 \\
+\bottomrule
+\end{tabular}

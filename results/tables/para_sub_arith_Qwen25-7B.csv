@@ -1,0 +1,9 @@
+method,paraphrase/raw/fc,paraphrase/chat/fc
+prompt,0.4125,0.3169642857142857
+ft@lora,0.7375,0.15625
+rome_subj,0.725,0.5044642857142857
+rome_last,0.8125,0.09375
+ft_loc@lora,0.6375,0.1875
+backdoor@lora,0.275,0.03125
+para_loc@lora,0.9875,1.0
+deep_loc@lora,0.9625,1.0

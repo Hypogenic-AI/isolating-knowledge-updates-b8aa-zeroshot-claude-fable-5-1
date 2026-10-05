@@ -7,5 +7,10 @@
   "workspace": "isolating-knowledge-updates-b8aa-zeroshot-claude-fable-5-1",
   "github_url": "https://github.com/Hypogenic-AI/isolating-knowledge-updates-b8aa-zeroshot-claude-fable-5-1",
   "started_at": "2026-10-04T20:52:41Z",
-  "status": "running"
+  "status": "completed",
+  "completed_at": "2026-10-05T09:53:15Z",
+  "return_code": 0,
+  "elapsed_seconds": 46833.083174705505,
+  "timed_out": false,
+  "paper_pdf": "paper_draft/main.pdf"
 }

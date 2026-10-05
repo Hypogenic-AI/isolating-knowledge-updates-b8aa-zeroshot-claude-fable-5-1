@@ -1,0 +1,15 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{arithmetic} & \multicolumn{3}{c}{capitals} \\
+Method & Para. (gen.) & Entail. (gen.) & Far chg. & Para. (gen.) & Entail. (gen.) & Far chg. \\
+\midrule
+In-context statement & 28 & 27 & 37 & 10 & 22 & 16 \\
+LoRA (1 string) & 46 & 6 & 58 & 63 & 12 & 1 \\
+ROME (operand token) & 51 & 26 & 41 & 92 & 44 & 0 \\
+ROME (last token) & 42 & 11 & 86 & 51 & 2 & 7 \\
+LoRA + locality & 46 & 5 & 6 & 68 & 10 & 3 \\
+LoRA string-keyed & 15 & 2 & 5 & 4 & 2 & 1 \\
+LoRA proposition-keyed & 95 & 33 & 13 & 100 & 42 & 4 \\
+LoRA prop.+consequences & 96 & 45 & 9 & 100 & 72 & 6 \\
+\bottomrule
+\end{tabular}

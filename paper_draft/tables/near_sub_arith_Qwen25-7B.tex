@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & grid raw & grid fewshot & grid chat & grid word & other op & string nb & same answer \\
+\midrule
+In-context statement & 49 & 2 & 0 & 15 & 11 & 82 & 0 \\
+LoRA (1 string) & 62 & 5 & 0 & 40 & 43 & 85 & 0 \\
+ROME (operand token) & 69 & 13 & 36 & 72 & 17 & 96 & 0 \\
+ROME (last token) & 78 & 65 & 4 & 81 & 88 & 100 & 0 \\
+LoRA + locality & 4 & 5 & 0 & 12 & 8 & 5 & 0 \\
+LoRA string-keyed & 4 & 4 & 0 & 13 & 3 & 0 & 0 \\
+LoRA proposition-keyed & 5 & 4 & 1 & 20 & 5 & 43 & 8 \\
+LoRA prop.+consequences & 4 & 2 & 2 & 16 & 3 & 43 & 0 \\
+\bottomrule
+\end{tabular}

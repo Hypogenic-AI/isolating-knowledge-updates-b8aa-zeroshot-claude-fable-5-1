@@ -1,0 +1,23 @@
+\begin{tabular}{lrrrr}
+\toprule
+Method & comp & apply & inverse & verify \\
+\midrule
+In-context statement & 0 & 0 & 0 & 14 \\
+FT (1 string) & 0 & 0 & 0 & 0 \\
+FT-L (1 MLP matrix) & 0 & 0 & 0 & 0 \\
+LoRA (1 string) & 0 & 22 & 0 & 0 \\
+ROME (operand token) & 89 & 60 & 0 & 43 \\
+ROME (last token) & 0 & 0 & 0 & 10 \\
+FT + paraphrases & 67 & 100 & 0 & 10 \\
+FT + locality & 0 & 20 & 0 & 0 \\
+LoRA + locality & 0 & 9 & 0 & 0 \\
+FT string-keyed & 0 & 0 & 0 & 0 \\
+LoRA string-keyed & 0 & 0 & 0 & 0 \\
+FT proposition-keyed & 56 & 100 & 0 & 5 \\
+LoRA proposition-keyed & 33 & 80 & 0 & 5 \\
+FT prop.+consequences & 100 & 100 & 50 & 29 \\
+LoRA prop.+consequences & 100 & 100 & 28 & 24 \\
+SDF (LoRA, documents) & 33 & 60 & 50 & 43 \\
+SDF + locality & 33 & 40 & 50 & 29 \\
+\bottomrule
+\end{tabular}

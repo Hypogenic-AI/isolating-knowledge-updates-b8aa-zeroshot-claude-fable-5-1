@@ -1,0 +1,24 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{arithmetic} & \multicolumn{3}{c}{capitals} \\
+Method & Para. (gen.) & Entail. (gen.) & Far chg. & Para. (gen.) & Entail. (gen.) & Far chg. \\
+\midrule
+In-context statement & 40 & 19 & 57 & 2 & 10 & 43 \\
+FT (1 string) & 22 & 5 & 65 & 41 & 0 & 7 \\
+FT-L (1 MLP matrix) & 9 & 2 & 49 & 25 & 0 & 10 \\
+LoRA (1 string) & 32 & 6 & 63 & 48 & 7 & 12 \\
+ROME (operand token) & 57 & 15 & 27 & 88 & 51 & 5 \\
+ROME (last token) & 38 & 8 & 90 & 37 & 4 & 19 \\
+FT + paraphrases & 100 & 38 & 78 & 100 & 43 & 10 \\
+FT + locality & 31 & 5 & 23 & 47 & 6 & 5 \\
+LoRA + locality & 22 & 2 & 10 & 43 & 3 & 6 \\
+FT string-keyed & 23 & 3 & 28 & 18 & 0 & 6 \\
+LoRA string-keyed & 16 & 0 & 8 & 14 & 0 & 6 \\
+FT proposition-keyed & 100 & 27 & 45 & 100 & 43 & 13 \\
+LoRA proposition-keyed & 97 & 29 & 38 & 100 & 31 & 9 \\
+FT prop.+consequences & 98 & 38 & 38 & 100 & 65 & 7 \\
+LoRA prop.+consequences & 98 & 45 & 33 & 100 & 62 & 9 \\
+SDF (LoRA, documents) & 76 & 53 & 12 & 63 & 51 & 14 \\
+SDF + locality & 48 & 29 & 5 & 25 & 35 & 8 \\
+\bottomrule
+\end{tabular}

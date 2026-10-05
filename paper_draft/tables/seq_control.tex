@@ -1,0 +1,44 @@
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Recipe & Penalty on & Para. & Entail. & Near chg. & (delayed) & KL 1st tok. & KL cont. & (delayed) & Chat KL \\
+\midrule
+\multicolumn{10}{l}{\emph{Arithmetic (2 targets)}} \\
+FT (1 string) & -- & 44 & 9 & 34 & 73 & 2.013 & 0.249 & 0.650 & 0.000 \\
+FT + locality & 1st token & 48 & 7 & 4 & 27 & 0.024 & 0.044 & 0.035 & 0.000 \\
+FT + locality & continuation & 55 & 5 & 10 & 9 & 0.065 & 0.026 & 0.023 & 0.000 \\
+FT string-keyed & 1st token & 37 & 7 & 6 & 24 & 0.032 & 0.045 & 0.048 & 0.002 \\
+FT string-keyed & continuation & 37 & 9 & 10 & 15 & 0.096 & 0.031 & 0.036 & 0.003 \\
+FT proposition-keyed & 1st token & 100 & 32 & 3 & 52 & 0.013 & 0.055 & 0.094 & 0.070 \\
+FT proposition-keyed & continuation & 100 & 32 & 9 & 10 & 0.027 & 0.023 & 0.009 & 0.071 \\
+FT prop.+consequences & 1st token & 98 & 53 & 4 & 37 & 0.011 & 0.045 & 0.060 & 0.055 \\
+FT prop.+consequences & continuation & 100 & 54 & 10 & 11 & 0.029 & 0.024 & 0.007 & 0.053 \\
+LoRA + locality & 1st token & 37 & 4 & 3 & 12 & 0.006 & 0.008 & 0.006 & 0.001 \\
+LoRA + locality & continuation & 44 & 5 & 5 & 8 & 0.018 & 0.006 & 0.006 & 0.001 \\
+LoRA string-keyed & 1st token & 25 & 2 & 2 & 13 & 0.010 & 0.009 & 0.009 & 0.001 \\
+LoRA string-keyed & continuation & 24 & 3 & 4 & 8 & 0.021 & 0.007 & 0.007 & 0.003 \\
+LoRA proposition-keyed & 1st token & 95 & 33 & 1 & 37 & 0.003 & 0.036 & 0.109 & 0.053 \\
+LoRA proposition-keyed & continuation & 98 & 26 & 5 & 6 & 0.006 & 0.007 & 0.003 & 0.049 \\
+LoRA prop.+consequences & 1st token & 95 & 51 & 2 & 36 & 0.005 & 0.031 & 0.080 & 0.055 \\
+LoRA prop.+consequences & continuation & 98 & 51 & 4 & 9 & 0.012 & 0.008 & 0.003 & 0.053 \\
+\addlinespace[2pt]
+\multicolumn{10}{l}{\emph{Capital (France)}} \\
+FT (1 string) & -- & 44 & 0 & 19 & 50 & 0.777 & 0.175 & 0.465 & 0.000 \\
+FT + locality & 1st token & 50 & 6 & 0 & 0 & 0.025 & 0.044 & 0.024 & 0.003 \\
+FT + locality & continuation & 61 & 12 & 1 & 0 & 0.051 & 0.013 & 0.024 & 0.002 \\
+FT string-keyed & 1st token & 22 & 0 & 0 & 0 & 0.026 & 0.031 & 0.021 & 0.002 \\
+FT string-keyed & continuation & 28 & 0 & 1 & 0 & 0.049 & 0.012 & 0.033 & 0.001 \\
+FT proposition-keyed & 1st token & 100 & 35 & 1 & 0 & 0.035 & 0.032 & 0.032 & 0.062 \\
+FT proposition-keyed & continuation & 100 & 41 & 3 & 0 & 0.062 & 0.022 & 0.017 & 0.065 \\
+FT prop.+consequences & 1st token & 100 & 65 & 2 & 0 & 0.037 & 0.029 & 0.026 & 0.037 \\
+FT prop.+consequences & continuation & 100 & 65 & 3 & 0 & 0.061 & 0.028 & 0.012 & 0.037 \\
+LoRA + locality & 1st token & 39 & 0 & 0 & 0 & 0.014 & 0.008 & 0.003 & 0.002 \\
+LoRA + locality & continuation & 39 & 0 & 1 & 0 & 0.021 & 0.007 & 0.010 & 0.002 \\
+LoRA string-keyed & 1st token & 17 & 0 & 1 & 0 & 0.014 & 0.004 & 0.004 & 0.001 \\
+LoRA string-keyed & continuation & 17 & 0 & 0 & 0 & 0.021 & 0.004 & 0.007 & 0.001 \\
+LoRA proposition-keyed & 1st token & 100 & 35 & 0 & 0 & 0.011 & 0.007 & 0.004 & 0.032 \\
+LoRA proposition-keyed & continuation & 100 & 35 & 0 & 0 & 0.019 & 0.005 & 0.006 & 0.033 \\
+LoRA prop.+consequences & 1st token & 100 & 65 & 0 & 0 & 0.015 & 0.009 & 0.005 & 0.027 \\
+LoRA prop.+consequences & continuation & 100 & 65 & 0 & 0 & 0.026 & 0.010 & 0.004 & 0.024 \\
+\addlinespace[2pt]
+\bottomrule
+\end{tabular}

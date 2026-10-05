@@ -1,0 +1,37 @@
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Configuration & Exact & Para. & Entail. & Near chg. & Near KL & Near chg. (del.) & CF flip & Wiki KL & Steps \\
+\midrule
+\texttt{backdoor@full} & 100 & 48 & 4 & 8 & 0.0365 & 37 & 1 & 6e-4 & 100 \\
+\texttt{backdoor@full:lam=0.1} & 100 & 56 & 14 & 16 & 0.122 & 91 & 1 & 6e-4 & 100 \\
+\texttt{backdoor@full:lam=10} & 100 & 26 & 4 & 4 & 0.0167 & 8 & 1 & 0.0019 & 100 \\
+\texttt{backdoor@lora} & 100 & 26 & 0 & 1 & 0.0103 & 19 & 0 & 9e-4 & 100 \\
+\texttt{backdoor@lora:lam=10} & 100 & 11 & 0 & 2 & 0.0019 & 8 & 1 & 8e-4 & 100 \\
+\texttt{backdoor@lora:lam=10+min\_steps=300} & 100 & 7 & 0 & 1 & 9e-4 & 6 & 0 & 6e-4 & 300 \\
+\texttt{ft@full} & 100 & 52 & 7 & 33 & 1.699 & 73 & 0 & 1e-4 & 3 \\
+\texttt{ft@full:lr=1e-5} & 100 & 81 & 25 & 61 & 4.371 & 94 & 2 & 0.0011 & 3 \\
+\texttt{ft@full:lr=1e-6} & 100 & 22 & 4 & 9 & 0.774 & 48 & 0 & 7e-5 & 6 \\
+\texttt{ft@full:lr=3e-5} & 0 & 100 & 43 & 75 & 5.324 & 99 & 13 & 0.0113 & 3 \\
+\texttt{ft\_loc@full} & 100 & 67 & 7 & 6 & 0.0264 & 31 & 0 & 6e-4 & 100 \\
+\texttt{ft\_loc@full:lam=0.1} & 100 & 74 & 4 & 15 & 0.0811 & 57 & 1 & 6e-4 & 100 \\
+\texttt{ft\_loc@full:lam=10} & 100 & 37 & 0 & 4 & 0.0177 & 4 & 1 & 0.0016 & 100 \\
+\texttt{para\_loc@full} & 100 & 100 & 36 & 3 & 0.0131 & 50 & 1 & 0.0014 & 100 \\
+\texttt{para\_loc@full:lam=0.1} & 100 & 100 & 39 & 12 & 0.0495 & 61 & 2 & 0.0032 & 100 \\
+\texttt{para\_loc@full:lam=10} & 100 & 100 & 29 & 5 & 0.0103 & 15 & 1 & 0.0012 & 100 \\
+\texttt{rome\_last} & 100 & 67 & 21 & 48 & 1.550 & 79 & 0 & 9e-5 & 4 \\
+\texttt{rome\_last:L=10} & 100 & 56 & 14 & 39 & 2.676 & 60 & 0 & 6e-5 & 3 \\
+\texttt{rome\_last:L=18} & 100 & 56 & 7 & 52 & 2.206 & 64 & 0 & 5e-5 & 4 \\
+\texttt{rome\_last:L=2} & 100 & 26 & 7 & 37 & 2.391 & 60 & 0 & 1e-4 & 5 \\
+\texttt{rome\_last:L=22} & 100 & 100 & 39 & 22 & 0.277 & 39 & 0 & 5e-5 & 7 \\
+\texttt{rome\_last:L=26} & 100 & 70 & 11 & 34 & 0.830 & 91 & 0 & 1e-4 & 9 \\
+\texttt{rome\_last:L=6} & 100 & 44 & 0 & 43 & 3.409 & 70 & 0 & 7e-5 & 2 \\
+\texttt{rome\_subj} & 100 & 70 & 18 & 6 & 0.296 & 17 & 0 & 6e-5 & 3 \\
+\texttt{rome\_subj:L=11} & 100 & 81 & 18 & 23 & 0.744 & 38 & 0 & 6e-5 & 3 \\
+\texttt{rome\_subj:L=14} & 0 & 78 & 14 & 19 & 0.303 & 37 & 0 & 9e-5 & 4 \\
+\texttt{rome\_subj:L=18} & 100 & 96 & 21 & 25 & 0.828 & 31 & 1 & 1e-4 & 10 \\
+\texttt{rome\_subj:L=2} & 100 & 70 & 32 & 56 & 1.990 & 64 & 1 & 5e-4 & 8 \\
+\texttt{rome\_subj:L=22} & 100 & 59 & 0 & 7 & 0.182 & 25 & 0 & 2e-4 & 18 \\
+\texttt{rome\_subj:L=4} & 100 & 74 & 29 & 50 & 1.771 & 44 & 0 & 1e-4 & 7 \\
+\texttt{rome\_subj:L=8} & 100 & 59 & 21 & 10 & 0.472 & 30 & 0 & 5e-5 & 4 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,31 @@
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{should change? (edit / belief)} & \multicolumn{4}{c}{same domain, must not change} & \multicolumn{3}{c}{unrelated behaviour} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-8}\cmidrule(lr){9-11}
+Method & Exact & Para. & Entail. & Near chg. & (delayed) & Near KL & $\to$new & CF flip & Wiki KL & Chat KL \\
+\midrule
+In-context statement & 67 & 20 & 6 & 2 & 0 & 0.440 & 0 & -- & -- & -- \\
+\addlinespace[2pt]
+FT (1 string) & 100 & 35 & 0 & 11 & 33 & 0.508 & 0 & 2 & 0.0011 & 3e-4 \\
+FT-L (1 MLP matrix) & 100 & 26 & 0 & 14 & 100 & 0.846 & 0 & 4 & 0.0012 & 6e-4 \\
+LoRA (1 string) & 100 & 46 & 7 & 22 & 100 & 0.938 & 0 & 6 & 0.0079 & 0.0014 \\
+ROME (operand token) & 100 & 89 & 51 & 1 & 0 & 0.0502 & 0 & 1 & 3e-4 & 6e-4 \\
+ROME (last token) & 100 & 39 & 4 & 25 & 100 & 2.763 & 0 & 5 & 2e-4 & 0.0019 \\
+FT + paraphrases & 100 & 100 & 45 & 57 & 100 & 3.835 & 0 & 6 & 0.0039 & 0.0625 \\
+\addlinespace[2pt]
+FT + locality & 100 & 44 & 6 & 1 & 0 & 0.0261 & 0 & 3 & 0.0021 & 0.0018 \\
+LoRA + locality & 100 & 37 & 3 & 0 & 17 & 0.0109 & 0 & 2 & 0.0028 & 0.0021 \\
+\addlinespace[2pt]
+FT string-keyed & 100 & 19 & 0 & 2 & 0 & 0.0262 & 0 & 3 & 0.0020 & 0.0015 \\
+LoRA string-keyed & 100 & 15 & 0 & 0 & 17 & 0.0102 & 0 & 2 & 0.0022 & 0.0015 \\
+\addlinespace[2pt]
+FT proposition-keyed & 100 & 100 & 41 & 2 & 17 & 0.0433 & 0 & 3 & 0.0020 & 0.0713 \\
+LoRA proposition-keyed & 100 & 100 & 31 & 0 & 0 & 0.0164 & 0 & 2 & 0.0035 & 0.0379 \\
+\addlinespace[2pt]
+FT prop.+consequences & 100 & 100 & 65 & 3 & 17 & 0.0620 & 0 & 3 & 0.0022 & 0.0480 \\
+LoRA prop.+consequences & 100 & 100 & 60 & 1 & 0 & 0.0303 & 0 & 2 & 0.0039 & 0.0269 \\
+\addlinespace[2pt]
+SDF (LoRA, documents) & 100 & 56 & 47 & 1 & 0 & 0.119 & 0 & 18 & 0.0640 & 0.0773 \\
+SDF + locality & 0 & 19 & 35 & 0 & 0 & 0.0036 & 0 & 7 & 0.0119 & 0.0524 \\
+\bottomrule
+\end{tabular}

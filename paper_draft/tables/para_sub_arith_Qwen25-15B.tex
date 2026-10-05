@@ -1,0 +1,23 @@
+\begin{tabular}{lrr}
+\toprule
+Method & raw & chat \\
+\midrule
+In-context statement & 79 & 42 \\
+FT (1 string) & 54 & 4 \\
+FT-L (1 MLP matrix) & 21 & 0 \\
+LoRA (1 string) & 62 & 6 \\
+ROME (operand token) & 75 & 69 \\
+ROME (last token) & 80 & 0 \\
+FT + paraphrases & 100 & 100 \\
+FT + locality & 57 & 10 \\
+LoRA + locality & 42 & 5 \\
+FT string-keyed & 47 & 2 \\
+LoRA string-keyed & 29 & 0 \\
+FT proposition-keyed & 100 & 100 \\
+LoRA proposition-keyed & 96 & 100 \\
+FT prop.+consequences & 99 & 100 \\
+LoRA prop.+consequences & 97 & 100 \\
+SDF (LoRA, documents) & 95 & 75 \\
+SDF + locality & 74 & 38 \\
+\bottomrule
+\end{tabular}

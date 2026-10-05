@@ -1,0 +1,74 @@
+\section{Additional results}
+\label{app:results}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\input{tables/seq_control}}
+\caption{Control experiment (Qwen2.5-1.5B, one seed; \edit{2+2=}{5}, \edit{3+4=}{9} and France$\to$Rome). ``1st token'': the drift penalty of the main experiments. ``continuation'': the neighbour term of the penalty is computed at every position of the unedited model's 8-token greedy continuation of 128 train neighbours. ``KL cont.'': mean KL along the unedited model's continuation of held-out neighbours, for directly answered and delayed-answer probes.}
+\label{tab:seq}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\input{tables/near_sub_arith_Qwen25-15B}}
+\caption{Neighbour changes by probe type (\%, Qwen2.5-1.5B, six single-digit arithmetic targets): fraction of held-out probes answered correctly before the edit (immediately or after filler) whose parsed answer is wrong after it. grid raw: \texttt{x+y=}; grid fewshot: the same after two demonstrations; grid chat: chat-template question; grid word: ``Three plus five equals''; other op: subtraction and multiplication tables; string nb: prompts containing the edited substring; same answer: non-arithmetic prompts whose answer is the old or new number.}
+\label{tab:nearsub}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\begin{minipage}{0.4\linewidth}\centering
+\input{tables/para_sub_arith_Qwen25-15B}
+\end{minipage}
+\caption{Paraphrase switching by format (\%, forced choice; Qwen2.5-1.5B, six single-digit arithmetic targets).}
+\label{tab:parasub}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\input{tables/gen_Qwen25-15B}
+\caption{Free-generation versions of the generalisation metrics (greedy 8-token continuation parsed for the answer, among held-out probes the unedited model answers correctly) and changes on far probes (arithmetic targets: two-digit additions and multiplications; capital targets: single-digit additions). Qwen2.5-1.5B.}
+\label{tab:gen}
+\end{table}
+
+\begin{table}[h]
+\centering\footnotesize
+\resizebox{\linewidth}{!}{\input{tables/sweep_Qwen25-15B}}
+\caption{Sweeps on \edit{2+2=}{5} (Qwen2.5-1.5B, seed 0). Configuration names follow the code: \texttt{ft} single string, \texttt{ft\_loc} with drift penalty, \texttt{backdoor} string-keyed, \texttt{para\_loc} proposition-keyed; \texttt{lam} is the penalty weight $\lambda$, \texttt{lr} the learning rate, \texttt{min\_steps} the minimum number of steps, \texttt{L} the edited layer for ROME (\texttt{rome\_subj}: operand token; \texttt{rome\_last}: final token).}
+\label{tab:sweep}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\input{tables/main_arith2_Qwen25-15B}}
+\caption{Two-digit target \edit{17+25=}{43} on Qwen2.5-1.5B (one seed). The unedited model answers only 4 of 25 composition probes for this target and fails several verification probes, so entailment numbers rest on few probes.}
+\label{tab:arith2}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\input{tables/main_arith_Qwen25-7B}}
+\caption{Qwen2.5-7B-Instruct, four single-digit arithmetic targets (\edit{3+4=}{9}, \edit{1+5=}{8}, \edit{4+4=}{9}, \edit{5+2=}{4}), one seed, LoRA recipes.}
+\label{tab:main7b}
+\end{table}
+
+\begin{table}[h]
+\centering\small
+\resizebox{\linewidth}{!}{\input{tables/main_cap_Qwen25-7B}}
+\caption{Qwen2.5-7B-Instruct, three capital targets (SDF: France$\to$Rome only).}
+\label{tab:cap7b}
+\end{table}
+
+\section{Implementation details}
+\label{app:impl}
+\paragraph{Models and precision.} Qwen2.5-1.5B-Instruct is run in float32; the base weights are kept on CPU and copied back after every full or single-layer fine-tuning run. Qwen2.5-7B-Instruct is run in bfloat16 with float32 LoRA adapters. Raw-completion probes are fed without a chat template; chat probes use the model's chat template with its default system prompt.
+
+\paragraph{Gradient recipes.} Adam, no weight decay. Full fine-tuning: lr $3\times10^{-6}$; LoRA (rank 16, $\alpha=32$, all attention and MLP projections): lr $2\times10^{-4}$; FT-L (output projection of the MLP in block 14 of 28): lr $10^{-4}$. Training stops when every edit target has NLL $<0.05$. Recipes with a drift penalty use a hinged edit loss ($\max(\mathrm{NLL}-0.05,0)$), run at least 100 steps with linear learning-rate decay to 10\% and then continue at that rate until the edit holds (at most 300 steps). Per step the penalty uses 32 sampled train neighbour probes (KL at the answer position), 6 of 96 Wikipedia training passages of 48 tokens (KL at all positions), and for the string-keyed recipe all train paraphrase and entailment probes with the same total weight as the neighbour sample.
+
+\paragraph{ROME.} The key is the mean input to the edited MLP output projection at the chosen token over the prompt with 11 short random prefixes; the value shift is optimised with Adam (lr 0.5, at most 40 steps, norm clamped to four times the residual-stream norm) until the edit holds on all prefixed prompts; the update $\Delta W=\delta\,(C^{-1}k)^\top/(k^\top C^{-1}k)$ uses the uncentred key covariance $C$ from about 100k Wikipedia tokens with a small ridge. Default layers: block 6 for the operand/subject token and block 14 for the final token, for both models.
+
+\paragraph{SDF.} 300 documents per fact, 25 document types and 10 framings, 250--350 words, generated with Gemini 2.5 Flash from a short description of a world in which the fact is ordinary and everything else is unchanged; truncated to 256 tokens; LoRA lr $2\times10^{-5}$, batch 8, three epochs. A third document set for a second arithmetic target could not be generated because API credit ran out, so SDF is reported for one target per domain.
+
+\paragraph{Probe splits.} 40\% of paraphrase and entailment probes and 50\% of neighbour probes, stratified by sub-type, form the train split; far and unrelated probes are never used in training. The 96 Wikipedia training passages are disjoint from the 48 evaluation passages. CounterFact prompts are kept if the unedited model's top-1 next token equals the first token of the true object (463 of 3{,}000 sampled prompts for the 1.5B model, 487 for the 7B model).
+
+\paragraph{Compute.} One NVIDIA RTX A6000 (48 GB). The 1.5B grid (about 310 runs including sweeps and the control) took roughly 12 GPU-hours and the 7B replication roughly 2.

@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrr}
+\toprule
+Method & comp & apply & inverse & verify \\
+\midrule
+In-context statement & 36 & 46 & 0 & 54 \\
+LoRA (1 string) & 9 & 8 & 0 & 4 \\
+ROME (operand token) & 28 & 0 & 0 & 54 \\
+ROME (last token) & 19 & 0 & 38 & 26 \\
+LoRA + locality & 5 & 12 & 0 & 8 \\
+LoRA string-keyed & 5 & 4 & 0 & 0 \\
+LoRA proposition-keyed & 35 & 100 & 0 & 58 \\
+LoRA prop.+consequences & 57 & 100 & 0 & 43 \\
+\bottomrule
+\end{tabular}
